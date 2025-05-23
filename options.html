@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Proxy Access Redirector 設定</title>
+  <style>
+    body {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    .container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .rule-list {
+      margin-bottom: 20px;
+    }
+    .rule-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      padding: 10px;
+      background: #f5f5f5;
+      border-radius: 4px;
+    }
+    .rule-item input {
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      flex: 1;
+    }
+    .rule-item button {
+      padding: 5px 10px;
+      background: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .rule-item button:hover {
+      background: #c82333;
+    }
+    .add-rule {
+      margin-top: 10px;
+    }
+    .add-rule button {
+      padding: 8px 16px;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .add-rule button:hover {
+      background: #218838;
+    }
+    .auto-redirect {
+      margin-top: 20px;
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 4px;
+    }
+    .auto-redirect label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+    .auto-redirect input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+    }
+    .description {
+      color: #666;
+      font-size: 0.9em;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Proxy Access Redirector 設定</h1>
+    
+    <div class="section">
+      <h2>変換ルール</h2>
+      <div class="rule-list" id="ruleList"></div>
+      <div class="add-rule">
+        <button id="addRule">新しいルールを追加</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="auto-redirect">
+        <label>
+          <input type="checkbox" id="autoRedirect">
+          <span>自動リダイレクトを有効にする</span>
+        </label>
+        <div class="description">
+          この設定を有効にすると、対応するURLにアクセスした際に自動的にプロキシ経由のURLにリダイレクトされます。<br>
+          無効にした場合でも、右クリックメニューから「プロキシ経由でアクセス」を選択することで手動でリダイレクトできます。
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html> 

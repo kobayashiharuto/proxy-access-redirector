@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Proxy Access Redirector",
+  "version": "0.1.0",
+  "description": "URLをプロキシ経由のURLに自動変換します。学術サイト、企業VPN、その他のプロキシアクセスに対応。",
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "storage",
+    "notifications",
+    "webNavigation",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "action": {
+    "default_title": "Proxy Access Redirector 設定"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  }
+} 
