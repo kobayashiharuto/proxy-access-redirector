@@ -11,11 +11,6 @@
 
 ## インストール方法
 
-### Chrome Web Store からインストール
-
-1. [Chrome Web Store](https://chrome.google.com/webstore)で「Proxy Access Redirector」を検索
-2. 「Chrome に追加」をクリック
-
 ### 開発版としてインストール
 
 1. このリポジトリをクローン
